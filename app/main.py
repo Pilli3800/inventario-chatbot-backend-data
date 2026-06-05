@@ -2,9 +2,12 @@ import os
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from dotenv import load_dotenv
 
 from app.routers.alertas_router import router as alertas_router
 from app.routers.consumo_router import router as consumo_router
+
+load_dotenv()
 
 app = FastAPI(
     title="Analisis de Consumo",
